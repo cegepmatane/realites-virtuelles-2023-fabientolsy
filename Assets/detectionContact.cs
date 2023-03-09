@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class detectionContact : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider collision)
-    {
-        Debug.Log(this.gameObject.name + " est entre en collision avec " + collision.name);
 
+    protected gestionCube cube;
+    
+    private void Start()
+    {
+        cube = transform.parent.gameObject.GetComponent<gestionCube>();
+    }
+    private void OnTriggerEnter(Collider collision)
+    { 
+        Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
+
+        cube.afficher();
     }
 }
