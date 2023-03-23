@@ -4,8 +4,33 @@ using UnityEngine;
 
 public class gestionCube : MonoBehaviour 
 {
+    private string codeUtilisateur; 
+
+    [Header("Code de validation")]
+    public string code = "1234";
+
+
     public void afficher(string nom)
     {
         Debug.Log("On appelle le fichier parent depuis le chiffre " + nom +  "!");
+        valider(nom);
+    }
+
+    private void valider (string nom) 
+    {
+        codeUtilisateur = codeUtilisateur + nom;
+
+        if(codeUtilisateur.Length == code.Length) 
+        {
+            if(codeUtilisateur == code) 
+            {
+                Debug.Log("Desactivation du mur");
+            }
+            else 
+            {
+                Debug.Log("Mauvais code saisis");
+                codeUtilisateur = "";
+            }
+        }
     }
 }
