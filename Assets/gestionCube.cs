@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class gestionCube : MonoBehaviour 
 {
-    public void afficher()
+    public void afficher(string nom)
     {
-        Debug.Log("On appelle le fichier parent !");
+        Debug.Log("On appelle le fichier parent depuis le chiffre " + nom +  "!");
     }
 }

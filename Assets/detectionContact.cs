@@ -15,6 +15,6 @@ public class detectionContact : MonoBehaviour
     { 
         Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
 
-        cube.afficher();
+        cube.afficher(this.gameObject.name);
     }
 }
