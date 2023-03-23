@@ -1990,6 +1990,18 @@ MonoBehaviour:
   input: 
   displayText: {fileID: 0}
   audioData: {fileID: 0}
+--- !u!114 &221526206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221526204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ed9433647fa7146bcda81c7d1c43d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &229625014
 GameObject:
   m_ObjectHideFlags: 0
@@ -17578,17 +17590,17 @@ PrefabInstance:
     - target: {fileID: 7778447591523124739, guid: d847de744f929154e8db50c8973917cb,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: -16.46745
+      value: -32.84
       objectReference: {fileID: 0}
     - target: {fileID: 7778447591523124739, guid: d847de744f929154e8db50c8973917cb,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: -21.175829
+      value: -42.36
       objectReference: {fileID: 0}
     - target: {fileID: 7778447591523124739, guid: d847de744f929154e8db50c8973917cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.477
+      value: 5.71
       objectReference: {fileID: 0}
     - target: {fileID: 7778447591523124739, guid: d847de744f929154e8db50c8973917cb,
         type: 3}
@@ -17598,7 +17610,7 @@ PrefabInstance:
     - target: {fileID: 7778447591523124739, guid: d847de744f929154e8db50c8973917cb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.914
+      value: -4.91
       objectReference: {fileID: 0}
     - target: {fileID: 7778447591523124739, guid: d847de744f929154e8db50c8973917cb,
         type: 3}
