@@ -12,9 +12,18 @@ public class detectionContact : MonoBehaviour
         cube = transform.parent.gameObject.GetComponent<gestionCube>();
     }
     private void OnTriggerEnter(Collider collision)
-    { 
-        Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
+    {
 
-        cube.afficher(this.gameObject.name);
+        if (collision.name == "hands:b_l_index3")
+        {
+            Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
+
+            cube.afficher(this.gameObject.name);
+        }
+
+        else
+        {
+            Debug.Log("Collion impossible !");
+        }
     }
 }
