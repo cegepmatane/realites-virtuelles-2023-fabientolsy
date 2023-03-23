@@ -12,7 +12,7 @@ public class detectionContact : MonoBehaviour
     private void Start()
     {
         cube = transform.parent.gameObject.GetComponent<gestionCube>();
-        temps = 0;
+        temps = 0f;
         
     }
     private void OnTriggerEnter(Collider collision)
@@ -22,14 +22,14 @@ public class detectionContact : MonoBehaviour
             Debug.Log("Temps depuis le debut: " + temps );
             Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
 
-            cube.afficher(this.gameObject.name);    
-            
-            temps = Time.time;
+            cube.afficher(this.gameObject.name);     
         }
 
         else
         {
             Debug.Log("COLLISION IMPOSSIBLE / TROP RAPIDE!");
-        }        
+        }
+
+        temps = Time.time;
     }
 }
