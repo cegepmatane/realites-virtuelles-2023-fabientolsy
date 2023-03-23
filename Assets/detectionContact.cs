@@ -16,7 +16,7 @@ public class detectionContact : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {        
-        if (collision.name == "hands:b_l_index3" && Time.time - temps >= 2)
+        if (collision.name == "hands:b_l_index3" && Time.time - temps >= 2.0f)
         {
             Debug.Log("Temps depuis le debut: " + temps );
             Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
