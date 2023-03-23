@@ -12,16 +12,17 @@ public class detectionContact : MonoBehaviour
     private void Start()
     {
         cube = transform.parent.gameObject.GetComponent<gestionCube>();
-        temps = Time.time;
+        
     }
     private void OnTriggerEnter(Collider collision)
-    {        
+    {
+        
         if (collision.name == "hands:b_l_index3")
         {
             float tempsPresent = Time.time;
             Debug.Log("Temps depuis le debut: " + temps + ", Temps collision: " + tempsPresent);
 
-            if (temps - tempsPresent >= 2)
+            if (Time.deltaTime >= 2)
             {
                 Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
 
