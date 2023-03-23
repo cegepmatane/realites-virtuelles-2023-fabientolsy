@@ -7,11 +7,12 @@ public class detectionContact : MonoBehaviour
 {
 
     protected gestionCube cube;
-    protected float temps = 0;
+    protected float temps;
     
     private void Start()
     {
         cube = transform.parent.gameObject.GetComponent<gestionCube>();
+        temps = 0;
         
     }
     private void OnTriggerEnter(Collider collision)
