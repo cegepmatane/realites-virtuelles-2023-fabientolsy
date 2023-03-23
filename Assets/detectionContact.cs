@@ -19,9 +19,9 @@ public class detectionContact : MonoBehaviour
         if (collision.name == "hands:b_l_index3")
         {
             float tempsPresent = Time.time;
-            Debug.Log("Temps: " + tempsPresent);
+            Debug.Log("Temps depuis le debut: " + temps + ", Temps collision: " + tempsPresent);
 
-            if (temps - tempsPresent >= 1.5)
+            if (temps - tempsPresent >= 2)
             {
                 Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
 
