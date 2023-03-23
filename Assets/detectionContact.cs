@@ -15,29 +15,20 @@ public class detectionContact : MonoBehaviour
         
     }
     private void OnTriggerEnter(Collider collision)
-    {
-        
-        if (collision.name == "hands:b_l_index3")
+    {        
+        if (collision.name == "hands:b_l_index3" && Time.time - temps >= 2)
         {
-            float tempsPresent = Time.time;
-            Debug.Log("Temps depuis le debut: " + temps + ", Temps collision: " + tempsPresent);
+            Debug.Log("Temps depuis le debut: " + temps );
+            Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
 
-            if (Time.deltaTime >= 2)
-            {
-                Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
-
-                cube.afficher(this.gameObject.name);
-            }
-            else
-            {
-                Debug.Log("TROP RAPIDE ! Temps present: " + tempsPresent);
-                tempsPresent = 0;
-            }
+            cube.afficher(this.gameObject.name);    
+            
+            temps = Time.time;
         }
 
         else
         {
-            Debug.Log("Collion impossible !");
-        }
+            Debug.Log("COLLISION IMPOSSIBLE / TROP RAPIDE!");
+        }        
     }
 }
