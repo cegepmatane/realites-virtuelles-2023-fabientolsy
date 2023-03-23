@@ -7,22 +7,31 @@ public class detectionContact : MonoBehaviour
 {
 
     protected gestionCube cube;
+    protected float temps = 0;
     
     private void Start()
     {
         cube = transform.parent.gameObject.GetComponent<gestionCube>();
+        temps = Time.time;
     }
     private void OnTriggerEnter(Collider collision)
-    {
-        float tempsPresent = Time.time;
-        Debug.Log("Temps: " + tempsPresent);
-
+    {        
         if (collision.name == "hands:b_l_index3")
         {
-            Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
+            float tempsPresent = Time.time;
+            Debug.Log("Temps: " + tempsPresent);
 
-            cube.afficher(this.gameObject.name);
+            if (temps - tempsPresent >= 1.5)
+            {
+                Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
 
+                cube.afficher(this.gameObject.name);
+            }
+            else
+            {
+                Debug.Log("TROP RAPIDE ! Temps present: " + tempsPresent);
+                tempsPresent = 0;
+            }
         }
 
         else
