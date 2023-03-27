@@ -21,7 +21,9 @@ public class detectionContact : MonoBehaviour
             Debug.LogWarning("Temps depuis le debut: " + temps );
             Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
 
-            cube.afficher(this.gameObject.name);     
+            cube.afficher(this.gameObject.name);
+            temps = Time.time;
+
         }
 
         else
@@ -29,6 +31,5 @@ public class detectionContact : MonoBehaviour
             Debug.Log("COLLISION IMPOSSIBLE / TROP RAPIDE!");
         }
 
-        temps = Time.time;
     }
 }
