@@ -12,6 +12,9 @@ public class gestionCube : MonoBehaviour
     [Header("Mur a desactiver")]
     public GameObject mur;
 
+    [Header("Ecran")]
+    public TextMesh affichage ;
+
     private string chiffreTemporaire = "";
 
     public void afficher(string nom)
@@ -25,6 +28,7 @@ public class gestionCube : MonoBehaviour
         if (nom != chiffreTemporaire) {
 
             codeUtilisateur = codeUtilisateur + nom;
+            affichage.text = codeUtilisateur;
 
             if (codeUtilisateur.Length == code.Length)
             {
