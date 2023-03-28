@@ -10,7 +10,8 @@ public class detectionCollision : MonoBehaviour
 
     public void OnTriggerEnter(Collider collision)
     {
-        if (collision.name == "hands:b_l_index3")
+        Debug.Log(collision.name + " est entre en collision avec " + this.gameObject.name);
+        if (collision.name == "Left Hand" || collision.name == "Right Hand")
         {
             Debug.Log("Desactivation du mur");
             mur.SetActive(false);
