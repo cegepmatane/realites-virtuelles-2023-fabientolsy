@@ -16,6 +16,7 @@ public class gestionCube : MonoBehaviour
     public TextMesh affichage ;
 
     private string chiffreTemporaire = "";
+    private bool finCode = false;
 
     public void afficher(string nom)
     {
@@ -25,33 +26,46 @@ public class gestionCube : MonoBehaviour
 
     private void valider (string nom) 
     {
-        if (nom != chiffreTemporaire) {
+        if(finCode == true) { finEntreeCode(); }
+        else { 
+            if (nom != chiffreTemporaire) {
 
-            codeUtilisateur = codeUtilisateur + nom;
-            affichage.text = codeUtilisateur;
+                codeUtilisateur = codeUtilisateur + nom;
+                affichage.text = codeUtilisateur;
 
-            if (codeUtilisateur.Length == code.Length)
-            {
-                if (codeUtilisateur == code)
+                if (codeUtilisateur.Length == code.Length)
                 {
-                    Debug.Log("Desactivation du mur");
-                    mur.SetActive(false);
+                    if (codeUtilisateur == code)
+                    {
+                        Debug.Log("Desactivation du mur");
+                        mur.SetActive(false);
+
+                        finCode = true;
+                        finEntreeCode();
+                    }
+                    else
+                    {
+                        Debug.Log("Mauvais code saisis");
+                        codeUtilisateur = "";
+                        affichage.text = codeUtilisateur;
+                    }
                 }
-                else
-                {
-                    Debug.Log("Mauvais code saisis");
-                    codeUtilisateur = "";
-                    affichage.text = codeUtilisateur;
-                }
-            }
-            else { chiffreTemporaire = nom; }
+                else { chiffreTemporaire = nom; }
 
             
-        }
+            }
 
-        else
-        {
-            Debug.Log("Impossible de traiter cette entree !");
+            else
+            {
+                Debug.Log("Impossible de traiter cette entree !");
+            }
         }
+    }
+
+    private void finEntreeCode()
+    {
+        affichage.text = "";
+        affichage.text = "Reussit !";
+        affichage.characterSize = .5f;
     }
 }
