@@ -762,8 +762,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031187892
-  m_Center: {x: -0.03, y: 0, z: 0.07}
+  m_Radius: 0.03431046
+  m_Center: {x: -0.030000001, y: -0.017416954, z: -0.04650235}
 --- !u!114 &70392970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8728,6 +8728,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 753304680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &758659035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5686134208185362830, guid: 1fd3a7c43c8190f4d8c167ebde694364,
+    type: 3}
+  m_PrefabInstance: {fileID: 927224801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &758659037
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758659035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.03686618
+  m_Center: {x: 0.0016339901, y: 0.0096314, z: 0.0021927862}
 --- !u!1 &759375301
 GameObject:
   m_ObjectHideFlags: 0
@@ -12511,6 +12530,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7166597405457573955, guid: 65847589f926b734d9eaed6e25f0046b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.03686618
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166597405457573955, guid: 65847589f926b734d9eaed6e25f0046b,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.0006324175
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166597405457573955, guid: 65847589f926b734d9eaed6e25f0046b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.008118063
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166597405457573955, guid: 65847589f926b734d9eaed6e25f0046b,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.0000006291438
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166597405457573955, guid: 65847589f926b734d9eaed6e25f0046b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
 --- !u!1 &1110256792 stripped
@@ -13706,8 +13750,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.03616643
+  m_Center: {x: 0.05274593, y: -0.023921356, z: -0.039972067}
 --- !u!114 &1230906640
 MonoBehaviour:
   m_ObjectHideFlags: 0

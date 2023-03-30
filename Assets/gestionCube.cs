@@ -41,9 +41,12 @@ public class gestionCube : MonoBehaviour
                 {
                     Debug.Log("Mauvais code saisis");
                     codeUtilisateur = "";
+                    affichage.text = codeUtilisateur;
                 }
             }
             else { chiffreTemporaire = nom; }
+
+            
         }
 
         else
