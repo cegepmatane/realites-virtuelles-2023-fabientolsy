@@ -18,6 +18,7 @@ public class SuiviBoutonVisuel : MonoBehaviour
 
     private bool estSuivi = false;
     private bool geler = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +65,7 @@ public class SuiviBoutonVisuel : MonoBehaviour
     {
         if (survol.interactorObject is XRPokeInteractor)
         {
-            geler = false;
+            geler = true;
         }
 
     }
