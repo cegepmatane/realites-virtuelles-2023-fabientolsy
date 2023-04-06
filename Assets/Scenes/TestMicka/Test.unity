@@ -1013,8 +1013,8 @@ GameObject:
   - component: {fileID: 861643498}
   - component: {fileID: 861643502}
   - component: {fileID: 861643501}
-  - component: {fileID: 861643500}
   - component: {fileID: 861643499}
+  - component: {fileID: 861643503}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -1059,22 +1059,6 @@ MonoBehaviour:
       m_EnablePokeAngleThreshold: 1
       m_PokeAngleThreshold: 45
     m_Variable: {fileID: 0}
---- !u!114 &861643500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861643497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ec0897d3a435c44ac74c758acf12aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cibleVisuel: {fileID: 233876609}
-  localAxis: {x: 0, y: -1, z: 0}
-  reinitVitesse: 5
-  angleSuivi: 0
 --- !u!114 &861643501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,8 +1105,8 @@ MonoBehaviour:
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: d7cdc46159c598d4cbb48295e40cfb6c,
-            type: 3}
+          m_ObjectArgument: {fileID: 2100000, guid: d8952f4642a831d4eb13a88dabb84bd7,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1143,7 +1127,7 @@ MonoBehaviour:
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: fa7a3e7fed290154f9e7e6ea86c0b518,
+          m_ObjectArgument: {fileID: 2100000, guid: 1b80d7a50e741744b8820da04771c903,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -1203,6 +1187,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &861643503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861643497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5dccb8f903ba04aab9951d32443b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cibleVisuel: {fileID: 233876609}
+  localAxis: {x: 0, y: -1, z: 0}
+  vitesseRes: 5
+  followAngleTreshold: 45
 --- !u!1 &878695993
 GameObject:
   m_ObjectHideFlags: 0
