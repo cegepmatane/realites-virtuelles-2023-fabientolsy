@@ -7518,6 +7518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mur: {fileID: 1895821508}
+  rb: {fileID: 603343341}
 --- !u!65 &603343340
 BoxCollider:
   m_ObjectHideFlags: 0
