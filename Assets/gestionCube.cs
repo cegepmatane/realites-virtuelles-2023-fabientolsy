@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class gestionCube : MonoBehaviour 
@@ -14,6 +15,7 @@ public class gestionCube : MonoBehaviour
 
     [Header("Ecran")]
     public TextMesh affichage ;
+    public TextMeshPro affichageTest;
 
     private string chiffreTemporaire = "";
     private bool finCode = false;
@@ -32,6 +34,7 @@ public class gestionCube : MonoBehaviour
 
                 codeUtilisateur = codeUtilisateur + nom;
                 affichage.text = codeUtilisateur;
+                affichageTest.text = codeUtilisateur;
 
                 if (codeUtilisateur.Length == code.Length)
                 {
