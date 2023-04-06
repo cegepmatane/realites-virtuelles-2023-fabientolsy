@@ -14,7 +14,7 @@ public class gestionCube : MonoBehaviour
     public GameObject mur;
 
     [Header("Ecran")]
-    public TextMesh affichage ;
+    //public TextMesh affichage ;
     public TextMeshPro affichageTest;
 
     private string chiffreTemporaire = "";
@@ -33,7 +33,7 @@ public class gestionCube : MonoBehaviour
             if (nom != chiffreTemporaire) {
 
                 codeUtilisateur = codeUtilisateur + nom;
-                affichage.text = codeUtilisateur;
+                //affichage.text = codeUtilisateur;
                 affichageTest.text = codeUtilisateur;
 
                 if (codeUtilisateur.Length == code.Length)
@@ -50,7 +50,8 @@ public class gestionCube : MonoBehaviour
                     {
                         Debug.Log("Mauvais code saisis");
                         codeUtilisateur = "";
-                        affichage.text = codeUtilisateur;
+                        //affichage.text = codeUtilisateur;
+                        affichageTest.text = codeUtilisateur;
                     }
                 }
                 else { chiffreTemporaire = nom; }
@@ -67,8 +68,11 @@ public class gestionCube : MonoBehaviour
 
     private void finEntreeCode()
     {
-        affichage.text = "";
+        /*affichage.text = "";
         affichage.text = "Reussit !";
-        affichage.characterSize = .5f;
+        affichage.characterSize = .5f;*/
+
+        affichageTest.text = "";
+        affichageTest.text = "Reussit !";
     }
 }
