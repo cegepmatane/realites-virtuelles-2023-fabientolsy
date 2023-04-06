@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Main VR Scene.unity
+    guid: c94d845b1ef47b447bc0cc2098019cad
+  - enabled: 1
+    path: Assets/FantasyCastleDemo/Demo.unity
+    guid: f09c740050b09fc4e93491a5edc94d00
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7875ed298e5e29f4f95ec01bdbfa28e3,
       type: 2}
