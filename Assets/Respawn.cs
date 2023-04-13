@@ -33,4 +33,9 @@ public class Respawn : MonoBehaviour
         SceneManager.LoadScene("Demo");
     }
 
+    public void exitgame()
+    {
+        Application.Quit();
+    }
+
 }
