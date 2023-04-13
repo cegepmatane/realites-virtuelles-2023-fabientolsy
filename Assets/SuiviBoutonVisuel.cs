@@ -106,7 +106,7 @@ public class SuiviBoutonVisuel : MonoBehaviour
             Debug.Log(positTemp);
         }
 
-        if(cibleVisuel.position.y <= 1.13)
+        if(cibleVisuel.position.y <= 0.054)
         {
             Debug.Log("Desactivation");
             gb.SetActive(false);
