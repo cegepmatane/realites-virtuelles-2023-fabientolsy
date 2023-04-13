@@ -11,6 +11,8 @@ public class SuiviBoutonVisuel : MonoBehaviour
     public float followAngleTreshold = 45;
     private bool geler = false;
 
+    public GameObject gb;
+
     private Vector3 initialLocalPos;
 
     private Vector3 offset;
@@ -19,6 +21,8 @@ public class SuiviBoutonVisuel : MonoBehaviour
     private XRBaseInteractable interactable;
     private bool estSuivi;
 
+    private float positTemp = 1000;
+     
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +54,8 @@ public class SuiviBoutonVisuel : MonoBehaviour
             }
         }
 
+       
+
     }
 
     public void Reinitialiser(BaseInteractionEventArgs hover)
@@ -73,9 +79,6 @@ public class SuiviBoutonVisuel : MonoBehaviour
 
     }
 
-
-
-    // Update is called once per frame
     void Update()
     {
         if (geler)
@@ -88,7 +91,6 @@ public class SuiviBoutonVisuel : MonoBehaviour
 
             Vector3 localTargertPosition = cibleVisuel.InverseTransformPoint(pokeAttachTransform.position + offset);
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargertPosition, localAxis);
-
             cibleVisuel.position = cibleVisuel.TransformPoint(constrainedLocalTargetPosition);
 
         }
@@ -96,6 +98,20 @@ public class SuiviBoutonVisuel : MonoBehaviour
         {
             cibleVisuel.localPosition = Vector3.Lerp(cibleVisuel.localPosition, initialLocalPos, Time.deltaTime * vitesseRes);
         }
+
+
+        if(positTemp > cibleVisuel.position.y)
+        {
+            positTemp = cibleVisuel.position.y;
+            Debug.Log(positTemp);
+        }
+
+        if(cibleVisuel.position.y <= 1.13)
+        {
+            Debug.Log("Desactivation");
+            gb.SetActive(false);
+        }
+        
     }
 
 }
